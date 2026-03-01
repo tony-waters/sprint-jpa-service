@@ -39,7 +39,9 @@ public class CustomerCommandServiceImpl implements CustomerCommandService {
         Customer c = customerRepository.findById(customerId)
                 .orElseThrow(() -> new NotFoundException("Customer " + customerId + " not found"));
         c.createProfile(req.emailAddress(), req.marketingOptIn());
-        return mapper.toResponse(c);
+        customerRepository.saveAndFlush(c);
+        Customer reloaded = customerRepository.findById(customerId).orElseThrow();
+        return mapper.toResponse(reloaded);
     }
 
     @Override
