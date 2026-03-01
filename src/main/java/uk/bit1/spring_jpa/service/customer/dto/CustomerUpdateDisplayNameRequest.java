@@ -1,9 +1,9 @@
-package uk.bit1.spring_jpa.web.customer.dto;
+package uk.bit1.spring_jpa.service.customer.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-public record CustomerCreateRequest(
+public record CustomerUpdateDisplayNameRequest(
         @NotBlank
         @Size(min = 2, max = 80)
         String displayName

@@ -212,4 +212,15 @@ class CustomerControllerIT {
                 .andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.error").value("NOT_FOUND"));
     }
+
+    @Test
+    void createCustomer_invalidJson_returns400InvalidJson() throws Exception {
+        mvc.perform(post("/api/customers")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                                { "displayName": %d }
+                                """))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("INVALID_JSON"));
+    }
 }

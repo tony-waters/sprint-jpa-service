@@ -1,6 +1,6 @@
 package uk.bit1.spring_jpa.service.customer;
 
-import uk.bit1.spring_jpa.web.customer.dto.*;
+import uk.bit1.spring_jpa.service.customer.dto.*;
 
 public interface CustomerCommandService {
     CustomerResponse create(CustomerCreateRequest req);

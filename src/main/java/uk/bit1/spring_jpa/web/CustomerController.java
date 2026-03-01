@@ -1,4 +1,4 @@
-package uk.bit1.spring_jpa.web.customer;
+package uk.bit1.spring_jpa.web;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import uk.bit1.spring_jpa.service.customer.CustomerCommandService;
 import uk.bit1.spring_jpa.service.customer.CustomerQueryService;
-import uk.bit1.spring_jpa.web.customer.dto.*;
+import uk.bit1.spring_jpa.service.customer.dto.*;
 
 import java.util.List;
 

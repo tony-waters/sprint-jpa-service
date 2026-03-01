@@ -1,4 +1,4 @@
-package uk.bit1.spring_jpa.service.customer;
+package uk.bit1.spring_jpa.service.customer.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import uk.bit1.spring_jpa.entity.Customer;
 import uk.bit1.spring_jpa.repository.CustomerRepository;
 import uk.bit1.spring_jpa.service.NotFoundException;
-import uk.bit1.spring_jpa.web.customer.dto.CustomerResponse;
+import uk.bit1.spring_jpa.service.customer.CustomerQueryService;
+import uk.bit1.spring_jpa.service.customer.dto.CustomerResponse;
+import uk.bit1.spring_jpa.service.customer.mapper.CustomerViewMapper;
 
 import java.util.List;
 
